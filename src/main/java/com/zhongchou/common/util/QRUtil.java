@@ -1,0 +1,29 @@
+package com.zhongchou.common.util;
+
+import com.google.zxing.common.BitMatrix;
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.OutputStream;
+import java.io.IOException;
+import java.awt.image.BufferedImage;
+
+public class QRUtil {
+
+   private static final int BLACK = 0xFF000000;
+   private static final int WHITE = 0xFFFFFFFF;
+
+   private QRUtil() {}
+
+
+   public static BufferedImage toBufferedImage(BitMatrix matrix) {
+     int width = matrix.getWidth();
+     int height = matrix.getHeight();
+     BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+     for (int x = 0; x < width; x++) {
+       for (int y = 0; y < height; y++) {
+         image.setRGB(x, y, matrix.get(x, y) ? BLACK : WHITE);
+       }
+     }
+     return image;
+   }
+}

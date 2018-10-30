@@ -1,0 +1,100 @@
+package com.zhongchou.common.zhongzhengSao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import net.sf.json.JSONObject;
+
+import org.apache.log4j.Logger;
+
+import com.yanshang.util.ConvUtils;
+import com.yanshang.util.StringUtils;
+import com.zhongchou.common.base.SCMap;
+import com.zhongchou.common.util.Log4jUtil;
+import com.zhongchou.common.util.ZhongzhengUtil;
+import com.zhongchou.common.zhongzheng.util.TimeoutException;
+	//用户风险评测提交
+	public class SubmitRiskQuestionsSao extends BaseSao {
+		Logger logger=Logger.getLogger(SubmitRiskQuestionsSao.class);
+		String functionId = "G0000018";
+
+	public SubmitRiskQuestionsSao(String req_ssn) {
+		super.req_ssn = req_date+req_ssn;
+	}
+
+
+	public Map receivEncryptData(String content){
+		Map retMap = new HashMap();//返回值
+		Map subjectMap = new HashMap();//提莫和答案
+		Map answerMap = new HashMap();//答案
+		//解密后的接口数据
+		String encryptData = null;
+		try {
+			encryptData = ZhongzhengUtil.receivEncryptData(content);
+			logger.info("SubmitRiskQuestionsSao receivEncryptData response ("+functionId+") :\r\n"+Log4jUtil.output(encryptData));
+			JSONObject obj = JSONObject.fromObject(encryptData);
+			JSONObject head= obj.getJSONObject("head");
+			JSONObject body= obj.getJSONObject("body");
+			String rspCode = head.get("rsp_code").toString();
+			String rspDesc = head.get("rsp_desc").toString();
+			if("000000".equals(rspCode)){//成功
+				retMap.put("loginId", body.get("login_id").toString());//登录帐号
+				retMap.put("score", body.get("score").toString());//评测分数
+				retMap.put("riskLevel", body.get("risk_level").toString());//风险等级
+				retMap.put("riskLevelDesc", body.get("risk_level_desc").toString());//风险描述
+				retMap.put("rsp_code", rspCode);
+				retMap.put("rsp_desc", rspDesc);
+			}else{//失败
+				retMap.put("rsp_code", rspCode);
+				retMap.put("rsp_desc", rspDesc);
+			}
+		} catch (Exception e) {
+			retMap.put("rsp_code", "000002");
+			retMap.put("rsp_desc", "获取中证数据失败");
+			e.printStackTrace();
+			return retMap;
+		}
+		return retMap;
+	}
+
+	public Map setEncryptData(Map setData){
+		logger.info("SubmitRiskQuestionsSao setEncryptData start ");
+		SCMap scBody = new SCMap();
+		SCMap scHeader = new SCMap();
+		SCMap scMap = new SCMap(scHeader,scBody);
+		Map retMap = new HashMap();
+		scHeader.setValue("req_ssn", req_ssn);
+		scHeader.setValue("req_date", req_date);
+		scHeader.setValue("version", version);
+		scHeader.setValue("ins_cd", ins_cd);
+		scHeader.setValue("channel_no", channel_no);
+		scHeader.setValue("function", functionId);
+		String userIp = setData.get("userIp").toString();
+		if(StringUtils.isEmpty(userIp)){
+			retMap.put("rsp_code", "000002");
+			retMap.put("rsp_desc", "userIp为空");
+		}
+		scHeader.setValue("user_ip", setData.get("userIp").toString());//操作ip
+
+		scBody.setValue("login_id", ConvUtils.convToString(setData.get("loginId")));//登录帐号
+		scBody.setValue("testq_id", ConvUtils.convToString(setData.get("testqId")));//题库编号
+		scBody.setValue("answer", ConvUtils.convToString(setData.get("answer")));//题目标号+冒号+答案选项编号，然后分号隔离，如：1:C;2:A,D;3:C;4:B;5:E;7:A;C:2;B:3;10:A;
+		logger.info("SubmitRiskQuestionsSao setEncryptData encryptDatarequest("+functionId+") :\r\n"+Log4jUtil.output(scMap.getMap().toString()));
+		String responseContent = null;
+		try {
+			responseContent = ZhongzhengUtil.encryption3Des(scMap.getMap());
+		} catch (TimeoutException e) {
+			retMap.put("rsp_code", "000010");
+			retMap.put("rsp_desc", "请求中证超时");
+			e.printStackTrace();
+			return retMap;
+		}catch (Exception e) {
+
+			retMap.put("rsp_code", "000001");
+			retMap.put("rsp_desc", "请求中证失败");
+			e.printStackTrace();
+			return retMap;
+		}//请求中证获取数据
+		return receivEncryptData(responseContent);
+	}
+}

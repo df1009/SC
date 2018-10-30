@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="commonDao" class="com.zhongchou.common.dao.impl.CommonDaoImpl" parent="baseDao"/>
+	<bean id="loginDao" class="com.zhongchou.common.dao.impl.LoginDaoImpl" parent="baseDao"/>
+	<bean id="smsDao" class="com.zhongchou.common.dao.impl.SmsDaoImpl" parent="baseDao"/>
+	<bean id="userDao" class="com.zhongchou.common.dao.impl.UserDaoImpl" parent="baseDao"/>
+	<bean id="operationSourceLogDao" class="com.zhongchou.common.dao.impl.OperationSourceLogDaoImpl" parent="baseDao"/>
+	<bean id="userForumDao" class="com.zhongchou.common.dao.impl.UserForumDaoImpl" parent="baseDao"/>
+	<bean id="indexDao" class="com.zhongchou.common.dao.impl.IndexDaoImpl" parent="baseDao"/>
+	<bean id="helpDao" class="com.zhongchou.common.dao.impl.HelpDaoImpl" parent="baseDao"/>
+	<bean id="productDao" class="com.zhongchou.common.dao.impl.ProductDaoImpl" parent="baseDao"/>
+	<bean id="myProjectDao" class="com.zhongchou.common.dao.impl.MyProjectDaoImpl" parent="baseDao"/>
+	<bean id="pcmyProjectDao" class="com.zhongchou.common.dao.impl.PCMyProjectDaoImpl" parent="baseDao"/>
+	<bean id="userTenderDao" class="com.zhongchou.common.dao.impl.UserTenderDaoImpl" parent="baseDao"/>
+	<bean id="pcuserTenderDao" class="com.zhongchou.common.dao.impl.PCUserTenderDaoImpl" parent="baseDao"/>
+	<bean id="userDetailDao" class="com.zhongchou.common.dao.impl.UserDetailDaoImpl" parent="baseDao"/>
+	<bean id="userIdVerificationDao" class="com.zhongchou.common.dao.impl.UserIdVerificationDaoImpl" parent="baseDao"/>
+	<bean id="userAccountBindBankDao" class="com.zhongchou.common.dao.impl.UserAccountBindBankDaoImpl" parent="baseDao"/>
+	<bean id="dealRecordDao" class="com.zhongchou.common.dao.impl.DealRecordDaoImpl" parent="baseDao"/>
+	<bean id="pcdealRecordDao" class="com.zhongchou.common.dao.impl.PCDealRecordDaoImpl" parent="baseDao"/>
+	<bean id="userBindbankDao" class="com.zhongchou.common.dao.impl.UserBindbankDaoImpl" parent="baseDao"/>
+	<bean id="noticeDao" class="com.zhongchou.common.dao.impl.NoticeDaoImpl" parent="baseDao"/>
+	<bean id="pcproductListDao" class="com.zhongchou.common.dao.impl.PCProductListDaoImpl" parent="baseDao"/>
+	<bean id="pcProductDao" class="com.zhongchou.common.dao.impl.PcProductDaoImpl" parent="baseDao"/>
+	<bean id="appproductListDao" class="com.zhongchou.common.dao.impl.APPProductListDaoImpl" parent="baseDao"/>
+	<bean id="pcMessageDao" class="com.zhongchou.common.dao.impl.PCMessageDaoImpl" parent="baseDao"/>
+	<bean id="APPUserTenderDao" class="com.zhongchou.common.dao.impl.AppUserTenderDaoImpl" parent="baseDao"/>
+</beans>

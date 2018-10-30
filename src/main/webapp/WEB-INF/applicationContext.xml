@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-4.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+
+	<import resource="classpath:spring/dao-beans.xml" />
+	<import resource="classpath:spring/base.xml" />
+	<!-- <aop:aspectj-autoproxy/> -->
+	<context:annotation-config />
+	<context:component-scan base-package="com.zhongchou.common" />
+
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager">
+            <bean class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+                <property name="configLocation" value="classpath:ehcache-config.xml"></property>
+            </bean>
+        </property>
+    </bean>
+	<bean class="com.yanshang.helper.ApplicationContextHelper"/>
+
+	<!-- <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="500"></property>
+	</bean>
+	<bean id="shardedJedisPool" class="redis.clients.jedis.ShardedJedisPool" destroy-method="close">
+		<constructor-arg index="0" ref="jedisPoolConfig"/>
+		<constructor-arg index="1" >
+			<list>
+				<bean class="redis.clients.jedis.JedisShardInfo">
+					<constructor-arg index="0" value="127.0.0.1"/>
+					<constructor-arg index="1" value="6379"/>
+				</bean>
+			</list>
+		</constructor-arg>
+	</bean> -->
+
+
+</beans>

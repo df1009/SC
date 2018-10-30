@@ -1,0 +1,353 @@
+package com.zhongchou.common.constant;
+
+/**
+ * 系统参数定义文件
+ */
+public class SystemManageConst {
+
+
+	/** APPLICATION_ID : GLOBAL **/
+	public final static String APPLICATION_ID_GLOBAL = "GLOBAL";
+
+	/** CATEGORY_ID: SYSTEM **/
+	public final static String CATEGORY_ID_SYSTEM = "SYSTEM";
+
+	/** CATEGORY_ID: FEE **/
+	public final static String CATEGORY_ID_FEE = "FEE";
+
+	/** CATEGORY_ID: AWARD **/
+	public final static String CATEGORY_ID_AWARD = "AWARD";
+
+	/** CATEGORY_ID: MAIL **/
+	public final static String CATEGORY_ID_MAIL = "MAIL";
+
+	/** CATEGORY_ID: AUTO_TENDER **/
+	public final static String CATEGORY_ID_AUTO_TENDER = "AUTO_TENDER";
+
+	/** CATEGORY_ID: IMAGE **/
+	public final static String CATEGORY_ID_IMAGE = "IMAGE";
+
+	/** CATEGORY_ID: PRODUCT_EXTEND **/
+	public final static String CATEGORY_ID_PRODUCT_EXTEND = "PRODUCT_EXTEND";
+
+	/** GROUP_ID: BASE_SETTING **/
+	public final static String GROUP_ID_BASE_SETTING = "BASE_SETTING";
+
+	/** GROUP_ID: OLD_DATA_SETTING **/
+	public final static String GROUP_ID_OLD_DATA_SETTING = "OLD_DATA_SETTING";
+
+	/** GROUP_ID: FINANCING **/
+	public final static String GROUP_ID_FINANCING = "FINANCING";
+
+	/** GROUP_ID: FUND **/
+	public final static String GROUP_ID_FUND = "FUND";
+
+	/** GROUP_ID: VIP **/
+	public final static String GROUP_ID_VIP = "VIP";
+
+	/** GROUP_ID: ADVANCE **/
+	public final static String GROUP_ID_ADVANCE = "ADVANCE";
+
+	/** GROUP_ID: INVESTRANK **/
+	public final static String GROUP_ID_INVESTRANK = "INVESTRANK";
+
+	/** GROUP_ID: INVITE **/
+	public final static String GROUP_ID_INVITE = "INVITE";
+
+	/** GROUP_ID: RECHARGE **/
+	public final static String GROUP_ID_RECHARGE = "RECHARGE";
+
+	/** GROUP_ID: REGIST **/
+	public final static String GROUP_ID_REGIST = "REGIST";
+
+	/** GROUP_ID: MAIL_SETTING **/
+	public final static String GROUP_ID_MAIL_SETTING = "MAIL_SETTING";
+
+	/** GROUP_ID: MANAGER **/
+	public final static String GROUP_ID_MANAGER = "MANAGER";
+
+	/** GROUP_ID: AUTO_TENDER_SETTING **/
+	public final static String GROUP_ID_AUTO_TENDER_SETTING = "AUTO_TENDER_SETTING";
+
+	/** GROUP_ID: INVITE_TENDER **/
+	public final static String GROUP_ID_INVITE_TENDER = "INVITE_TENDER";
+
+	/** GROUP_ID: INDEX **/
+	public final static String GROUP_ID_INDEX = "INDEX";
+
+	/** GROUP_ID: PRE_REPAY **/
+	public final static String GROUP_ID_PRE_REPAY = "PRE_REPAY";
+
+	/** GROUP_ID: PRE_REPAY **/
+	public final static String GROUP_ID_AUTO_FINANCING_SETTING = "AUTO_FINANCING";
+
+	/** GROUP_ID: PRODUCT_EXTEND_ATTRIBUTE **/
+	public final static String GROUP_ID_PRODUCT_EXTEND_ATTRIBUTE = "PRODUCT_EXTEND_ATTRIBUTE";
+
+	/** NAME: WEBSITE_TITLE 网站名称 **/
+	public final static String NAME_WEBSITE_TITLE = "WEBSITE_TITLE";
+
+	/** NAME: WEBSITE_KEYWORDS 关键词 **/
+	public final static String NAME_WEBSITE_KEYWORDS = "WEBSITE_KEYWORDS";
+
+	/** NAME: WEBSITE_DESCRIPTION 描述 **/
+	public final static String NAME_WEBSITE_DESCRIPTION = "WEBSITE_DESCRIPTION";
+
+	/** NAME: WEBSITE_COPYRIGHT 底部版权信息 **/
+	public final static String NAME_WEBSITE_COPYRIGHT = "WEBSITE_COPYRIGHT";
+
+	/** NAME: WEBSITE_ICP 备案号 **/
+	public final static String NAME_WEBSITE_ICP = "WEBSITE_ICP";
+
+	/** NAME: AUTO_INVEST_FLG 开启自动投资 **/
+	public final static String NAME_AUTO_INVEST_FLG = "AUTO_INVEST_FLG";
+
+	/** NAME: OPEN_VIP_FEE_CHARGED 开启VIP收费 **/
+	public final static String NAME_OPEN_VIP_FEE_CHARGED = "OPEN_VIP_FEE_CHARGED";
+
+	/** NAME: VIP_FEE VIP费 **/
+	public final static String NAME_VIP_FEE = "VIP_FEE";
+
+	/** NAME: CASH_FIRST_TIME 提现手续费第一时间段(小时) **/
+	public final static String NAME_CASH_FIRST_TIME = "CASH_FIRST_TIME";
+
+	/** NAME: CASH_SECOND_TIME 提现手续费第二时间段(小时) **/
+	public final static String NAME_CASH_SECOND_TIME = "CASH_SECOND_TIME";
+
+	/** NAME: CASH_FIRST_TIME_RATES 普通用户第一时间段提现手续费率(%) **/
+	public final static String NAME_CASH_FIRST_TIME_RATES = "CASH_FIRST_TIME_RATES";
+
+	/** NAME: CASH_SECOND_TIME_RATES 普通用户第二时间段提现手续费率(%) **/
+	public final static String NAME_CASH_SECOND_TIME_RATES = "CASH_SECOND_TIME_RATES";
+
+	/** NAME: CASH_OTHER_TIME_RATES 普通用户其他时间段提现手续费率(%) **/
+	public final static String NAME_CASH_OTHER_TIME_RATES = "CASH_OTHER_TIME_RATES";
+
+	/** NAME: VIP_CASH_FIRST_TIME_RATES VIP用户第一时间段提现手续费率(%) **/
+	public final static String NAME_VIP_CASH_FIRST_TIME_RATES = "VIP_CASH_FIRST_TIME_RATES";
+
+	/** NAME: VIP_CASH_SECOND_TIME_RATES VIP用户第二时间段提现手续费率(%) **/
+	public final static String NAME_VIP_CASH_SECOND_TIME_RATES = "VIP_CASH_SECOND_TIME_RATES";
+
+	/** NAME: VIP_CASH_OTHER_TIME_RATES VIP用户其他时间段提现手续费率(%) **/
+	public final static String NAME_VIP_CASH_OTHER_TIME_RATES = "VIP_CASH_OTHER_TIME_RATES";
+
+	/** NAME: SINGLE_CASH_MIN_AMOUNT 普通用户单笔提现最小金额 **/
+	public final static String NAME_SINGLE_CASH_MIN_AMOUNT = "SINGLE_CASH_MIN_AMOUNT";
+
+	/** NAME: SINGLE_CASH_MAX_AMOUNT 普通用户单笔提现最大金额 **/
+	public final static String NAME_SINGLE_CASH_MAX_AMOUNT = "SINGLE_CASH_MAX_AMOUNT";
+
+	/** NAME: VIP_SINGLE_CASH_MIN_AMOUNT VIP用户单笔提现最小金额 **/
+	public final static String NAME_VIP_SINGLE_CASH_MIN_AMOUNT = "VIP_SINGLE_CASH_MIN_AMOUNT";
+
+	/** NAME: VIP_SINGLE_CASH_MAX_AMOUNT VIP用户单笔提现最大金额 **/
+	public final static String NAME_VIP_SINGLE_CASH_MAX_AMOUNT = "VIP_SINGLE_CASH_MAX_AMOUNT";
+
+	/** NAME: SINGLE_RECHARGE_MIN_AMOUNT 单笔充值最小金额 **/
+	public final static String NAME_SINGLE_RECHARGE_MIN_AMOUNT = "SINGLE_RECHARGE_MIN_AMOUNT";
+
+	/** NAME: TRANSACTION_FEE 普通用户融资成交费(本金%) **/
+	public final static String NAME_TRANSACTION_FEE = "TRANSACTION_FEE";
+
+	/** NAME: VIP_TRANSACTION_FEE VIP用户融资成交费(本金%) **/
+	public final static String NAME_VIP_TRANSACTION_FEE = "VIP_TRANSACTION_FEE";
+
+	/** NAME: TRANSFER_TRANSACTION_FEE 债权转让成交费(本金%) **/
+	public final static String NAME_TRANSFER_TRANSACTION_FEE = "TRANSFER_TRANSACTION_FEE";
+	/** NAME: TRANSFER_TRANSACTION_30_60_FEE 项目持有30-60天债权转让成交费(本金%) **/
+	public final static String NAME_TRANSFER_TRANSACTION_30_60_FEE = "TRANSFER_TRANSACTION_30_60_FEE";
+	/** NAME: TRANSFER_TRANSACTION_60_90_FEE 项目持有60-90天债权转让成交费(本金%) **/
+	public final static String NAME_TRANSFER_TRANSACTION_60_90_FEE = "TRANSFER_TRANSACTION_60_90_FEE";
+	/** NAME: TRANSFER_TRANSACTION_90_EXCEED_FEE 项目持有90天以上债权转让成交费(本金%) **/
+	public final static String NAME_TRANSFER_TRANSACTION_90_EXCEED_FEE = "TRANSFER_TRANSACTION_90_EXCEED_FEE";
+
+	/** NAME: VIP_MANAGEMENT_FEE 普通用户融资管理费(本金%/期) **/
+	public final static String NAME_MANAGEMENT_FEE = "MANAGEMENT_FEE";
+
+	/** NAME: VIP_MANAGEMENT_FEE VIP用户融资管理费(本金%/期) **/
+	public final static String NAME_VIP_MANAGEMENT_FEE = "VIP_MANAGEMENT_FEE";
+
+	/** NAME: INTEREST_SERVICE_FEE 普通用户利息服务费(利息%) **/
+	public final static String NAME_INTEREST_SERVICE_FEE = "INTEREST_SERVICE_FEE";
+
+	/** NAME: VIP_INTEREST_SERVICE_FEE VIP用户利息服务费(利息%) **/
+	public final static String NAME_VIP_INTEREST_SERVICE_FEE = "VIP_INTEREST_SERVICE_FEE";
+
+	/** NAME: OVERDUE_PENALTY_1_3 逾期1-3天罚息日利率(‰) **/
+	public final static String NAME_OVERDUE_PENALTY_1_3 = "OVERDUE_PENALTY_1_3";
+
+	/** NAME: OVERDUE_PENALTY_4_30 逾期4-30天罚息日利率(‰) **/
+	public final static String NAME_OVERDUE_PENALTY_4_30 = "OVERDUE_PENALTY_4_30";
+
+	/** NAME: OVERDUE_PENALTY_31_90 逾期31-90天罚息日利率(‰) **/
+	public final static String NAME_OVERDUE_PENALTY_31_90 = "OVERDUE_PENALTY_31_90";
+
+	/** NAME: OVERDUE_PENALTY_BEYOND_90 逾期90天以上罚息日利率(‰) **/
+	public final static String NAME_OVERDUE_PENALTY_BEYOND_90 = "OVERDUE_PENALTY_BEYOND_90";
+
+	/** NAME: OVERDUE_MANAGEMENT_FEE_4_10 逾期4-10天催缴管理费(本金‰/日) **/
+	public final static String NAME_OVERDUE_MANAGEMENT_FEE_4_10 = "OVERDUE_MANAGEMENT_FEE_4_10";
+
+	/** NAME: OVERDUE_MANAGEMENT_FEE_11_30 逾期11-30天催缴管理费(本金‰/日) **/
+	public final static String NAME_OVERDUE_MANAGEMENT_FEE_11_30 = "OVERDUE_MANAGEMENT_FEE_11_30";
+
+	/** NAME: OVERDUE_MANAGEMENT_FEE_31_90 逾期31-90天催缴管理费(本金‰/日) **/
+	public final static String NAME_OVERDUE_MANAGEMENT_FEE_31_90 = "OVERDUE_MANAGEMENT_FEE_31_90";
+
+	/** NAME: OVERDUE_MANAGEMENT_FEE_BEYOND_90 逾期90天以上催缴管理费(本金‰/日) **/
+	public final static String NAME_OVERDUE_MANAGEMENT_FEE_BEYOND_90 = "OVERDUE_MANAGEMENT_FEE_BEYOND_90";
+
+	/** NAME: AUTO_INVEST_PERCENTAGE_OF_FINANCING 自动投标总额占融资总额百分比(%) **/
+	public final static String NAME_AUTO_INVEST_PERCENTAGE_OF_FINANCING = "AUTO_INVEST_PERCENTAGE_OF_FINANCING";
+
+	/** NAME: ADVANCE_PRINCIPAL 普通用户垫付本金(%) **/
+	public final static String NAME_ADVANCE_PRINCIPAL = "ADVANCE_PRINCIPAL";
+
+	/** NAME: VIP_ADVANCE_PRINCIPAL VIP用户垫付本金(%) **/
+	public final static String NAME_VIP_ADVANCE_PRINCIPAL = "VIP_ADVANCE_PRINCIPAL";
+
+	/** NAME: OPEN_INTEREST_ADVANCE 开启利息垫付 **/
+	public final static String NAME_OPEN_INTEREST_ADVANCE = "OPEN_INTEREST_ADVANCE";
+
+	/** NAME: OPEN_REGIST_AWARD 开启注册奖励 **/
+	public final static String NAME_OPEN_REGIST_AWARD = "OPEN_REGIST_AWARD";
+
+	/** NAME: REGIST_AWARD_AMOUNT 注册奖励金额 **/
+	public final static String NAME_REGIST_AWARD_AMOUNT = "REGIST_AWARD_AMOUNT";
+
+	/** NAME: OPEN_ONLINE_RECHARGE_AWARD 开启线上充值奖励 **/
+	public final static String NAME_OPEN_ONLINE_RECHARGE_AWARD = "OPEN_ONLINE_RECHARGE_AWARD";
+
+	/** NAME: ONLINE_RECHARGE_SINGLE_AMOUNT_AWARD 线上充值按单笔充值金额奖励 **/
+	public final static String NAME_ONLINE_RECHARGE_SINGLE_AMOUNT_AWARD = "ONLINE_RECHARGE_SINGLE_AMOUNT_AWARD";
+
+	/** NAME: ONLINE_RECHARGE_SINGLE_AMOUNT_PERCENTAGE_AWARD 线上充值按单笔充值金额百分比奖励(%) **/
+	public final static String NAME_ONLINE_RECHARGE_SINGLE_AMOUNT_PERCENTAGE_AWARD = "ONLINE_RECHARGE_SINGLE_AMOUNT_PERCENTAGE_AWARD";
+
+	/** NAME: ONLINE_RECHARGE_SINGLE_MIN_AMOUNT 线上充值单笔最小充值金额 **/
+	public final static String NAME_ONLINE_RECHARGE_SINGLE_MIN_AMOUNT = "ONLINE_RECHARGE_SINGLE_MIN_AMOUNT";
+
+	/** NAME: OPEN_OFFLINE_RECHARGE_AWARD 开启线下充值奖励 **/
+	public final static String NAME_OPEN_OFFLINE_RECHARGE_AWARD = "OPEN_OFFLINE_RECHARGE_AWARD";
+
+	/** NAME: OFFLINE_RECHARGE_SINGLE_AMOUNT_AWARD 线下充值按单笔充值金额奖励 **/
+	public final static String NAME_OFFLINE_RECHARGE_SINGLE_AMOUNT_AWARD = "OFFLINE_RECHARGE_SINGLE_AMOUNT_AWARD";
+
+	/** NAME: OFFLINE_RECHARGE_SINGLE_AMOUNT_PERCENTAGE_AWARD 线下充值按单笔充值金额百分比奖励(%) **/
+	public final static String NAME_OFFLINE_RECHARGE_SINGLE_AMOUNT_PERCENTAGE_AWARD = "OFFLINE_RECHARGE_SINGLE_AMOUNT_PERCENTAGE_AWARD";
+
+	/** NAME: OFFLINE_RECHARGE_SINGLE_MIN_AMOUNT 线下充值单笔最小充值金额 **/
+	public final static String NAME_OFFLINE_RECHARGE_SINGLE_MIN_AMOUNT = "OFFLINE_RECHARGE_SINGLE_MIN_AMOUNT";
+
+	/** NAME: INVITE_AWARD_AMOUNT 邀请奖励金额 **/
+	public final static String NAME_INVITE_AWARD_AMOUNT = "INVITE_AWARD_AMOUNT";
+
+	/** NAME: INVITE_AWARD_TYPE 邀请奖励方式 **/
+	public final static String NAME_INVITE_AWARD_TYPE = "INVITE_AWARD_TYPE";
+
+	/** NAME: INVITE_AWARD_PREREQUISITES 邀请奖励条件 **/
+	public final static String NAME_INVITE_AWARD_PREREQUISITES = "INVITE_AWARD_PREREQUISITES";
+
+	/** NAME: INVITE_AWARD_OBJECT 邀请奖励对象 **/
+	public final static String NAME_INVITE_AWARD_OBJECT = "INVITE_AWARD_OBJECT";
+
+	/** NAME: OPEN_INVEST_RANK_AWARD 开启投资排名奖励 **/
+	public final static String NAME_OPEN_INVEST_RANK_AWARD = "OPEN_INVEST_RANK_AWARD";
+
+	/** NAME: INTEREST_AMOUNT_AWARD 按投资金额奖励 **/
+	public final static String NAME_INTEREST_AMOUNT_AWARD = "INTEREST_AMOUNT_AWARD";
+
+	/** NAME: INTEREST_AMOUNT_PERCENTAGE_AWARD 按投资金额百分比奖励(%) **/
+	public final static String NAME_INTEREST_AMOUNT_PERCENTAGE_AWARD = "INTEREST_AMOUNT_PERCENTAGE_AWARD";
+
+	/** NAME: AWARD_RANK 投资排名奖励名次 **/
+	public final static String NAME_AWARD_RANK = "AWARD_RANK";
+
+	/** NAME: SENDER 发件人 **/
+	public final static String NAME_SENDER = "SENDER";
+
+	/** NAME: FROM_ADDRESS 发送邮件地址 **/
+	public final static String NAME_FROM_ADDRESS = "FROM_ADDRESS";
+
+	/** NAME: SMTP 发送邮件服务器(SMTP)**/
+	public final static String NAME_SMTP = "SMTP";
+
+	/** NAME: PORT 发送邮件服务器端口号 **/
+	public final static String NAME_PORT = "PORT";
+
+	/** NAME: ACCOUNT 用户名 **/
+	public final static String NAME_ACCOUNT = "ACCOUNT";
+
+	/** NAME: PASSWORD 密码 **/
+	public final static String NAME_PASSWORD = "PASSWORD";
+
+	/** TYPE: TEXT **/
+	public final static String TYPE_TEXT = "TEXT";
+	/** TYPE: TEXTAREA **/
+	public final static String TYPE_TEXTAREA = "TEXTAREA";
+	/** TYPE: RADIO **/
+	public final static String TYPE_RADIO = "RADIO";
+	/** TYPE: PASSWORD **/
+	public final static String TYPE_PASSWORD = "PASSWORD";
+
+	/** NAME: OPEN_INVITE_AWARD 开启邀请奖励 **/
+	public final static String NAME_OPEN_INVITE_AWARD = "OPEN_INVITE_AWARD";
+
+	/** NAME: OPEN_MANAGER_AWARD 开启经理人奖励 **/
+	public final static String NAME_OPEN_MANAGER_AWARD = "OPEN_MANAGER_AWARD";
+
+	/** NAME: MANAGER_AWARD_PREREQUISITES 经理人奖励条件 **/
+	public final static String NAME_MANAGER_AWARD_PREREQUISITES = "MANAGER_AWARD_PREREQUISITES";
+
+	/** NAME: CUSTOMER_INTEREST_AMOUNT_PERCENTAGE_AWARD 按客户投资金额百分比奖励(%) **/
+	public final static String NAME_CUSTOMER_INTEREST_AMOUNT_PERCENTAGE_AWARD = "CUSTOMER_INTEREST_AMOUNT_PERCENTAGE_AWARD";
+
+	/** NAME: OPEN_INVITE_TENDER_AWARD 开启邀请投资奖励 **/
+	public final static String NAME_OPEN_INVITE_TENDER_AWARD = "OPEN_INVITE_TENDER_AWARD";
+	/** NAME: OPEN_INVITE_TENDER_AWARD_CAI1 财富—开启邀请投资奖励（好友投资项目期限<=90天） **/
+	public final static String NAME_OPEN_INVITE_TENDER_AWARD_CAI1 = "OPEN_INVITE_TENDER_AWARD_CAI1";
+	/** NAME: OPEN_INVITE_TENDER_AWARD_CAI2 财富—开启邀请投资奖励（90<好友投资项目期限<=180天） **/
+	public final static String NAME_OPEN_INVITE_TENDER_AWARD_CAI2 = "OPEN_INVITE_TENDER_AWARD_CAI2";
+	/** NAME: OPEN_INVITE_TENDER_AWARD_CAI3 财富—开启邀请投资奖励（好友投资项目期限>180天） **/
+	public final static String NAME_OPEN_INVITE_TENDER_AWARD_CAI3 = "OPEN_INVITE_TENDER_AWARD_CAI3";
+
+	/** NAME: INVITE_TENDER_AWARD_PREREQUISITES 邀请投资奖励条件（最低投资金额） **/
+	public final static String NAME_INVITE_TENDER_AWARD_PREREQUISITES = "INVITE_TENDER_AWARD_PREREQUISITES";
+	/** NAME: INVITE_TENDER_MANAGER_AWARD_ALSO 邀请投资奖励条件 （理财经理人是否奖励） **/
+	public final static String NAME_INVITE_TENDER_MANAGER_AWARD_ALSO = "INVITE_TENDER_MANAGER_AWARD_ALSO";
+
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1   一级邀请投资奖励(%) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1 = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1";
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI1   财富(好友投资项目期限<=90天)—盐商员工邀请投资奖励(%) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI1 = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI1";
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI2  财富(90天<好友投资项目期限<=180天)—盐商员工邀请投资奖励(%) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI2 = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI2";
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI3 财富(好友投资项目期限>180天)—盐商员工邀请投资奖励(%) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI3 = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI3";
+
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2   二级邀请投资奖励(%) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2 = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2";
+
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1   一级邀请投资奖励(%)(言禹) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_YAN = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_YAN";
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2   二级邀请投资奖励(%)(言禹) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2_YAN = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2_YAN";
+
+
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1   一级邀请投资奖励(%)(财富) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD1_CAI";
+	/** NAME: INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2   二级邀请投资奖励(%)(财富) **/
+	public final static String NAME_INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2_CAI = "INVITE_TENDER_AMOUNT_PERCENTAGE_AWARD2_CAI";
+
+	/** NAME: OPEN_AUTO_TENDER 开启自动投资 **/
+	public final static String NAME_OPEN_AUTO_TENDER = "OPEN_AUTO_TENDER";
+	/** NAME: OPEN_AUTO_OPEN_AUTO_FINANCING 开启自动理财 **/
+	public final static String NAME_OPEN_AUTO_FINANCING = "OPEN_AUTO_FINANCING";
+
+	/** NAME: AUTO_TENDER_MAX_RATE 自动投标金额占借款总额的最大比例(%) **/
+	public final static String NAME_AUTO_TENDER_MAX_RATE = "AUTO_TENDER_MAX_RATE";
+
+	/** NAME: GUARANTEE_TYPE_NAME 保障方式 **/
+	public final static String NAME_GUARANTEE_TYPE_NAME = "GUARANTEE_TYPE_NAME";
+}
